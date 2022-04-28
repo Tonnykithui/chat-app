@@ -1,13 +1,209 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+img{
+    @apply h-9 w-9 rounded-full mr-5;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.Link{
+    @apply text-blue-500 text-sm;
+}
+
+.app-ui{
+    @apply w-full max-h-full;
+}
+
+.chat-ui{
+    @apply grid grid-cols-4 w-full h-screen;
+}
+
+.users, .info{
+    @apply col-span-1 w-full bg-slate-50 h-screen;
+}
+
+.messages{
+    @apply col-span-2 h-screen w-full bg-white relative;
+}
+
+
+.wrapper{
+    @apply p-2 h-full pl-8;
+}
+
+.userList{
+    @apply list-none h-4/6  overflow-y-scroll;
+}
+
+.userList li{
+    @apply flex flex-row mt-1 mb-1 h-14 pl-2 items-center text-blue-500 
+    text-lg font-semibold cursor-pointer;
+}
+
+.userList li:hover{
+    @apply bg-blue-400 text-white;
+}
+
+.self-info{
+    @apply flex items-center h-16;
+}
+
+.details h4{
+    @apply text-lg text-blue-800 font-semibold;
+}
+
+.details h5{
+    @apply text-slate-600 text-sm font-semibold;
+}
+
+.Search{
+    @apply bg-white rounded-lg h-10 outline-none border-none w-64 p-2;
+}
+
+.search-input{
+    @apply mb-4 text-lg text-slate-800;
+}
+
+.user-details{
+    @apply shadow-md border-b-2 border-slate-200 pl-5 flex flex-row pt-2 pb-2
+    items-center text-lg text-blue-400 font-semibold h-16
+    ;
+}
+
+.active{
+    @apply h-2 w-2 rounded-full bg-red-500 ml-4;
+}
+
+.message{
+    @apply flex flex-row mt-2 w-96 mb-2;
+}
+
+.message-right{
+    @apply  float-right bg-transparent text-black;
+}
+
+.message-info{
+    @apply  p-1 pl-2 pr-2 bg-blue-400 text-white rounded-lg;
+}
+
+.message-info-right{
+    @apply p-1 mr-1 rounded-lg bg-slate-300;
+}
+
+.messages-container{
+    @apply absolute h-4/5 mt-2 overflow-y-auto;
+}
+
+
+.info{
+    @apply pt-20;
+}
+
+.img{
+    @apply flex justify-center pl-3;
+}
+
+.info-img{
+    @apply h-24 w-24 rounded-full;
+}
+
+.rel-info{
+    @apply text-center mt-7;
+}
+
+.rel-info h2{
+    @apply text-2xl ;
+}
+
+.rel-info h3{
+    @apply text-lg;
+}
+
+.msg-input{
+    @apply absolute bottom-0;
+}
+
+.input{
+    @apply h-10 w-96 border-none outline-none bg-slate-200 text-black 
+    rounded-lg pl-3
+    ;
+}
+
+.btn{
+    @apply p-2 bg-blue-500 text-white rounded-lg text-lg ml-6;
+}
+
+.logout-btn{
+    @apply pl-4 pr-4 pt-1 pb-1 bg-blue-600 text-white mt-8 text-lg
+    rounded-lg
+    ;
+}
+
+.logout-btn:hover{
+    @apply bg-red-600 transition-all duration-300;
+}
+
+.logout{
+    @apply flex justify-center pr-20;
+}
+
+.group-display{
+    @apply flex flex-row;
+}
+
+.group-display img{
+    @apply h-5 w-5 rounded-full;
+}
+
+.group-header{
+    @apply text-center text-2xl text-blue-500 font-semibold;
+}
+
+.group-list{
+    @apply flex flex-row h-10 text-lg mt-3 items-center font-semibold;
+}
+
+.message-img{
+    @apply h-7 w-7 rounded-full;
+}
+
+.Account{
+    @apply h-screen w-full bg-red-400 flex flex-row justify-center items-center;
+}
+
+.register, .login{
+    @apply bg-white pt-10 pb-10 pl-5 pr-5 rounded-md;
+}
+
+.Logo{
+    @apply text-center ;
+}
+
+.Logo h2{
+    @apply text-2xl font-bold;
+}
+
+.Name, .passwords{
+    @apply flex flex-row pt-2 pb-2;
+}
+
+.email input{
+    @apply w-full mt-2;
+}
+
+.form form input{
+    @apply bg-slate-300 outline-none border-none rounded-lg text-black p-3 mr-1;
+}
+
+.form-2 form input{
+    @apply bg-slate-300 outline-none border-none rounded-lg text-black p-3 mr-1 w-80;
+}
+
+.submit-btn{
+    @apply w-full flex mt-4;
+}
+
+.submit-btn button{
+    @apply bg-blue-400 pt-1 pb-1 text-center text-white w-full rounded-2xl text-xl;
 }
